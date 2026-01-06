@@ -56,7 +56,7 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="font-display text-2xl md:text-3xl text-foreground/80 mb-8"
             >
-              Frontend Developer
+              Frontend Developer(react - next.js)
             </motion.h2>
             
             <motion.p
