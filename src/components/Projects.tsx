@@ -1,113 +1,188 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
-const PROJECTS_DATA = [
+/* =======================
+   DATA
+======================= */
+
+const FEATURED_PROJECTS = [
   {
-    title: "Graduation Project - IMS",
-    description: "Smart medical system for Chest Hospital - Graduation project from Faculty of Computers and Information",
-    tech: ["React", "Next.js", "TypeScript"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-    demo: "#",
-    github: "#",
+    title: "E-commerce",
+    description:
+      "A modern e-commerce platform built with Next.js, featuring authentication, cart management, and a clean responsive UI.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
+    demo: "https://e-commerce-five-phi-93.vercel.app/",
+    github: "https://github.com/esraakhaled123/e-commerce.git",
   },
   {
-    title: "E-commerce Website",
-    description: "Integrated online store with shopping cart and payment system",
-    tech: ["React", "Tailwind", "API"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    demo: "#",
-    github: "#",
-  },
-  {
-    title: "Admin Dashboard",
-    description: "Interactive dashboard with charts and statistics",
-    tech: ["Next.js", "Chart.js", "TypeScript"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    demo: "#",
-    github: "#",
+    title: "Kudo (Social App)",
+    description:
+      "A social platform focused on content sharing and user interaction with modern UI patterns.",
+    tech: ["React", "Tailwind CSS", "React Query" ,'java script'],
+    image:
+      "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800&h=500&fit=crop",
+    demo: "https://scocial-platform.vercel.app/login",
+    github: "https://github.com/esraakhaled123/scocial-platform.git",
   },
 ];
 
-const ProjectCard = ({ project, index }: { project: typeof PROJECTS_DATA[0]; index: number }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: index * 0.15 }}
-    whileHover={{ y: -10 }}
-    className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300"
-  >
-    <div className="relative overflow-hidden group">
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 gap-4">
-        <a
-          href={project.demo}
-          className="p-3 bg-primary text-primary-foreground rounded-full hover:scale-110 transition-transform"
+const PRACTICE_PROJECTS = [
+  {
+    title: "Mini Bookmark Manager",
+    description:
+      "Lightweight JavaScript app for managing bookmarks using local storage.",
+    tech: ["JavaScript", "HTML", "CSS", "Bootstrap"],
+    image:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop",
+    demo: "https://book-mark-bice.vercel.app/",
+    github: "https://github.com/esraakhaled123/BookMark.git",
+  },
+   {
+   title: "Gallery Website (UI Practice)",
+    description: "Static gallery website built to practice modern layout, typography, and responsive design using HTML and CSS.",
+tech: ["HTML", "CSS", "Responsive Design", 'BootStrao'],
+ image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&h=400&fit=crop",
+
+    demo: "https://galery-taupe.vercel.app/",
+    github: "https://github.com/esraakhaled123/galery.git",
+  },
+];
+
+/* =======================
+   CARD
+======================= */
+
+const ProjectCard = ({ project, index, variant = "featured" }) => {
+  const isPractice = variant === "practice";
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      whileHover={{ y: isPractice ? -3 : -5 }}
+      className="bg-card rounded-xl overflow-hidden shadow-soft transition-all"
+    >
+      <div className="relative group overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.title}
+          className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+            isPractice ? "h-36" : "h-44"
+          }`}
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent
+          opacity-0 group-hover:opacity-100 transition-opacity duration-300
+          flex items-end justify-center gap-3 pb-4"
         >
-          <ExternalLink size={20} />
-        </a>
-        <a
-          href={project.github}
-          className="p-3 bg-background text-foreground rounded-full hover:scale-110 transition-transform"
-        >
-          <Github size={20} />
-        </a>
-      </div>
-    </div>
-    
-    <div className="p-6">
-      <h3 className="font-display text-xl font-semibold mb-2 text-foreground">
-        {project.title}
-      </h3>
-      <p className="text-muted-foreground font-body text-sm mb-4 leading-relaxed">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2">
-        {project.tech.map((tech) => (
-          <span
-            key={tech}
-            className="px-3 py-1 bg-primary/10 text-primary text-xs font-body rounded-full"
+          <a
+            href={project.demo}
+            target="_blank"
+            className="p-2 bg-primary text-primary-foreground rounded-full"
           >
-            {tech}
-          </span>
-        ))}
+            <ExternalLink size={16} />
+          </a>
+          <a
+            href={project.github}
+            target="_blank"
+            className="p-2 bg-background text-foreground rounded-full"
+          >
+            <Github size={16} />
+          </a>
+        </div>
       </div>
-    </div>
-  </motion.div>
-);
+
+      <div className={isPractice ? "p-3" : "p-4"}>
+        <h3 className={`font-semibold mb-1 ${
+          isPractice ? "text-sm" : "text-base"
+        }`}>
+          {project.title}
+        </h3>
+
+        <p className={`text-muted-foreground mb-2 leading-relaxed ${
+          isPractice ? "text-xs" : "text-sm"
+        }`}>
+          {project.description}
+        </p>
+
+        <div className="flex flex-wrap gap-1.5">
+          {project.tech.map((item) => (
+            <span
+              key={item}
+              className={`rounded-full bg-primary/10 text-primary ${
+                isPractice
+                  ? "px-2 py-0.5 text-[10px]"
+                  : "px-2.5 py-0.5 text-[11px]"
+              }`}
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+/* =======================
+   PAGE
+======================= */
 
 const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-card/50">
       <div className="container mx-auto max-w-6xl">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gradient">
             Projects
           </h2>
-          <p className="text-muted-foreground font-body text-lg">
-            Some of my previous work
+          <p className="text-muted-foreground text-lg">
+            Selected work & practice projects
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS_DATA.map((project, index) => (
-            <ProjectCard 
-              key={project.title} 
-              project={project} 
-              index={index} 
-            />
-          ))}
+        {/* Featured */}
+        <div className="mb-16">
+          <h3 className="text-xl font-semibold mb-6">Featured Projects</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {FEATURED_PROJECTS.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
+
+        {/* Practice */}
+        <div>
+          <h3 className="text-lg font-semibold mb-5 text-muted-foreground">
+            Practice & Small Projects
+          </h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {PRACTICE_PROJECTS.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+                variant="practice"
+              />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -54,7 +54,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="font-display text-2xl md:text-3xl text-foreground/80 mb-8"
+              className="font-display text-2xl md:text-3xl text-foreground/80 mb-8 capitalize"
             >
               Frontend Developer(react - next.js)
             </motion.h2>
@@ -63,10 +63,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="font-body text-muted-foreground text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0"
+              className="font-body text-muted-foreground text-sm leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0"
             >
               A Frontend Developer specializing in React and Next.js.
-              I love building beautiful and smooth user experiences.
+              I build modern, responsive, and high-performance web applications with React,
+              next.js, TypeScript, and TailwindCSS.
             </motion.p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -77,12 +78,14 @@ const Hero = () => {
                 My Projects
               </button>
               <a
-                href="/cv.pdf"
-                download
-                className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-body font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              >
-                Download CV
-              </a>
+  href="/Esraa_Khaled_Frontend_Developer.pdf"
+  download="Esraa_Khaled_CV.pdf" // تحديد اسم الملف عند التحميل
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-body font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+>
+  Download CV
+</a>
             </div>
           </motion.div>
 
@@ -118,7 +121,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:block">
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden lg:block">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -126,7 +129,7 @@ const Hero = () => {
           >
             <motion.div className="w-1.5 h-3 bg-primary rounded-full" />
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
