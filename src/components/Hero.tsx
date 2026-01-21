@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import profileImage from "@/assets/profile.png";
+import { FileText } from "lucide-react";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -8,6 +9,7 @@ const Hero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden relative">
@@ -77,16 +79,22 @@ const Hero = () => {
               >
                 My Projects
               </button>
-              <a
-  href="/Esraa_Khaled_Frontend_Developer.pdf"
-  download="Esraa_Khaled_CV.pdf" // تحديد اسم الملف عند التحميل
-  target="_blank" 
+   
+<a
+  href="https://drive.google.com/file/d/1KuaGG1SwdcrIe6ztV5v62qz8uPVD-gTG/view?usp=sharing"
+  target="_blank"
   rel="noopener noreferrer"
-  className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-body font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+  className="group inline-flex items-center gap-2 px-8 py-4 
+             border-2 border-primary text-primary rounded-lg 
+             font-body font-medium
+             hover:bg-primary hover:text-primary-foreground 
+             transition-all duration-300"
 >
-  Download CV
+  View my CV
+    <FileText className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+
 </a>
-            </div>
+</div>
           </motion.div>
 
           <motion.div

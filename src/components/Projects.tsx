@@ -13,7 +13,7 @@ const FEATURED_PROJECTS = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
-    demo: "https://scocial-platform.vercel.app",
+    demo: "https://e-commerce-cj2z.vercel.app/",
     github: "https://github.com/esraakhaled123/e-commerce.git",
   },
   {
@@ -23,8 +23,8 @@ const FEATURED_PROJECTS = [
     tech: ["React", "Tailwind CSS", "React Query" ,'java script'],
     image:
       "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800&h=500&fit=crop",
-    demo: "https://scocial-platform.vercel.app/login",
-    github: "https://github.com/esraakhaled123/scocial-platform.git",
+    demo: "https://esraa-socail-platform-rouge.vercel.app/login",
+    github: "https://github.com/esraakhaled123/socail-platform.git",
   },
 ];
 
