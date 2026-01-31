@@ -72,7 +72,7 @@ const Hero = () => {
     capitalize
   "
 >
-  Frontend Developer (React · Next.js)
+Frontend Developer · React & Next.js
 </motion.h2>
 
 
