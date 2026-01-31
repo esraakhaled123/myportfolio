@@ -12,7 +12,7 @@ const Hero = () => {
   
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden relative">
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 py-15 overflow-hidden relative">
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"

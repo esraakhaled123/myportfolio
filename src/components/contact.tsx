@@ -24,7 +24,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-14  ">
+    <section id="contact" className="py-20  ">
       {/* <div className="container mx-auto max-w-4xl"> */}
       <div className="mx-auto max-w-6xl ">
 
