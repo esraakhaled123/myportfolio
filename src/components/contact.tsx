@@ -57,7 +57,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="group bg-card rounded-2xl p-6 shadow-soft hover:shadow-lg transition hover:-translate-y-1"
+              className="group bg-card rounded-2xl p-6  shadow-xlg transition hover:-translate-y-1"
             >
               <item.icon className="w-7 h-7 text-primary mb-4 group-hover:scale-110 transition " />
               <h3 className="font-semibold text-lg text-foreground mb-1">
