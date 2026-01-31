@@ -24,8 +24,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 px-6 ">
-      <div className="container mx-auto max-w-4xl">
+    <section id="contact" className="py-14  ">
+      {/* <div className="container mx-auto max-w-4xl"> */}
+      <div className="mx-auto max-w-6xl ">
+
 
         {/* Title */}
         <motion.div
@@ -57,7 +59,7 @@ const Contact = () => {
               transition={{ delay: i * 0.15 }}
               className="group bg-card rounded-2xl p-6 shadow-soft hover:shadow-lg transition hover:-translate-y-1"
             >
-              <item.icon className="w-7 h-7 text-primary mb-4 group-hover:scale-110 transition" />
+              <item.icon className="w-7 h-7 text-primary mb-4 group-hover:scale-110 transition " />
               <h3 className="font-semibold text-lg text-foreground mb-1">
                 {item.title}
               </h3>

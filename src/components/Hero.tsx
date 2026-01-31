@@ -26,7 +26,9 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+<div className="mx-auto max-w-7xl px-6 relative z-10">
+      {/* <div className="container mx-auto max-w-6xl relative z-10"> */}
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -47,19 +49,33 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="font-display text-5xl md:text-7xl font-bold mb-6 text-gradient"
+              className="font-display text-5xl md:text-7xl font-bold mb-2 text-gradient"
             >
               Esraa Khaled
             </motion.h1>
             
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="font-display text-2xl md:text-3xl text-foreground/80 mb-8 capitalize"
-            >
-              Frontend Developer(react - next.js)
-            </motion.h2>
+       <motion.h2
+  initial={{ opacity: 0, y: 16 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6 }}
+  className="
+    inline-block
+    px-4
+   
+    text-sm
+    md:text-base
+    font-medium
+    text-white
+    bg-primary
+    rounded-lg
+    mb-4
+    capitalize
+  "
+>
+  Frontend Developer (React · Next.js)
+</motion.h2>
+
+
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}

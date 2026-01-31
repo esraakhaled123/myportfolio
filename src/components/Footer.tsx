@@ -3,8 +3,10 @@ import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-5 px-6 border-t border-border">
-      <div className="container mx-auto max-w-6xl">
+    <footer className="py-5  border-t border-border">
+      {/* <div className="container mx-auto max-w-6xl"> */}
+      <div className="mx-auto max-w-6xl ">
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

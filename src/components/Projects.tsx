@@ -17,7 +17,7 @@ const FEATURED_PROJECTS = [
     github: "https://github.com/esraakhaled123/e-commerce.git",
   },
   {
-    title: "Kudo (Social App)",
+title: "Kudo – Social Platform",
     description:
       "A social platform focused on content sharing and user interaction with modern UI patterns.",
     tech: ["React", "Tailwind CSS", "React Query" ,'java script'],
@@ -134,8 +134,9 @@ const ProjectCard = ({ project, index, variant = "featured" }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6 bg-card/50">
-      <div className="container mx-auto max-w-6xl">
+    <section id="projects" className="py-20  bg-card/50">
+      {/* <div className="container mx-auto max-w-6xl"> */}
+<div className="mx-auto max-w-6xl ">
 
         {/* Header */}
         <motion.div
