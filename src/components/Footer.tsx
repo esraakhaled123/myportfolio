@@ -41,7 +41,7 @@ const Footer = () => {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/esraa-khaled-90331a25a/"
+              href="https://www.linkedin.com/in/esraa-khaled-dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full border border-border text-muted-foreground

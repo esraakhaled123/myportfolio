@@ -6,27 +6,27 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "esraakhaledharfoush@gmail.com",
+      // value: "esraakhaledharfoush@gmail.com",
       link: "mailto:esraakhaledharfoush@gmail.com",
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "linkedin.com/in/esraa-khaled-90331a25a",
-      link: "https://www.linkedin.com/in/esraa-khaled-90331a25a",
+      // value: "linkedin.com/in/esraa-khaled-90331a25a",
+      link: "https://www.linkedin.com/in/esraa-khaled-dev/",
     },
     {
       icon: Github,
       title: "GitHub",
-      value: "github.com/esraakhaled123",
+      // value: "github.com/esraakhaled123",
       link: "https://github.com/esraakhaled123",
     },
   ];
 
   return (
-    <section id="contact" className="py-20  ">
+    <section id="contact" className="py-20 text-center ">
       {/* <div className="container mx-auto max-w-4xl"> */}
-      <div className="mx-auto max-w-6xl ">
+      <div className="mx-auto max-w-6xl text-center">
 
 
         {/* Title */}
@@ -46,7 +46,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3 text-center">
           {items.map((item, i) => (
             <motion.a
               key={i}
@@ -57,9 +57,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="group bg-card rounded-2xl p-6  shadow-xlg transition hover:-translate-y-1"
+              className="group bg-card rounded-2xl p-6  shadow-xlg transition hover:-translate-y-1 text-center"
             >
-              <item.icon className="w-7 h-7 text-primary mb-4 group-hover:scale-110 transition " />
+              <item.icon className="w-7 h-7 text-primary mb-4 group-hover:scale-110 transition text-center" />
               <h3 className="font-semibold text-lg text-foreground mb-1">
                 {item.title}
               </h3>
